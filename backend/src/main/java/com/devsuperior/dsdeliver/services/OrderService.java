@@ -13,6 +13,7 @@ import com.devsuperior.dsdeliver.dto.OrderDTO;
 import com.devsuperior.dsdeliver.dto.ProductDTO;
 import com.devsuperior.dsdeliver.entities.Order;
 import com.devsuperior.dsdeliver.entities.Product;
+import com.devsuperior.dsdeliver.enums.OrderStatus;
 import com.devsuperior.dsdeliver.repositories.OrdertRepository;
 import com.devsuperior.dsdeliver.repositories.ProductRepository;
 
@@ -38,6 +39,14 @@ public class OrderService {
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
 		}
+		order = repository.save(order);
+		return new OrderDTO(order);
+	}
+	
+	@Transactional
+	public OrderDTO setDelivered(Long id) {
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.DELIVERED);
 		order = repository.save(order);
 		return new OrderDTO(order);
 	}
