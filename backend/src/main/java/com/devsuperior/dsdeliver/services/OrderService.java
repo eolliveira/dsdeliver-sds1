@@ -36,6 +36,7 @@ public class OrderService {
 	public OrderDTO insert(OrderDTO dto) {
 		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(), dto.getStatus().PENDING);
 		for(ProductDTO p : dto.getProducts()) {
+			@SuppressWarnings("deprecation")
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
 		}
