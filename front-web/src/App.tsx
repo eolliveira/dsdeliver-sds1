@@ -1,10 +1,14 @@
 import './App.css';
-import NavBar from './Components/NavBar';
+import Footer from './components/Footer';
+import Navbar from './components/NavBar';
+import Routes from './RoutesMain';
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      <Navbar />
+      <Routes />
+      <Footer />
     </div>
   );
 }

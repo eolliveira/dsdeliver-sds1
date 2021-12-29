@@ -4,6 +4,7 @@
     padding-left: 45px;
     display: flex;
     align-items: center;
+
 }
 
 .logo-text {
@@ -12,4 +13,9 @@
     letter-spacing: -0.015em;
     color: #FFFFFF;
     margin-left: 15px;
+    text-decoration: none;
+}
+
+.logo-text:hover {
+    color: #ffffff;
 }
