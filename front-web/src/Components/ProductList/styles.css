@@ -1,0 +1,11 @@
+.products-content {
+    width: 100%;
+    background-color: var(--light-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,235px);
+    grid-gap: 20px 15px;
+    justify-content: space-between;
+    margin: 50px 50px 50px 50px;
+    padding: 20px;
+    border-radius: 10px;
+}

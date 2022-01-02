@@ -1,0 +1,28 @@
+.card {
+    width: 15rem;
+}
+
+h5 {
+    text-align: center;
+}
+
+.order-card-price {
+    margin-top: 15px;
+    font-size: 24px;
+}
+
+.order-card-descricao {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.order-card-text {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.linha-horizontal {
+    height: 20px;
+    width: 300px;
+    border: 1px solid var(--secondary-color);
+}
