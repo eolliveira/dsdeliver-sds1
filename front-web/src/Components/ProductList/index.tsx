@@ -11,7 +11,7 @@ const ProductList = ( { products } : Props) => {
     return (
             <div className='container products-content'>
                 {products.map((product) => (
-                    <ProductCard product={product}/>
+                    <ProductCard key={product.id} product={product}/>
                 ))}
             </div>
     );

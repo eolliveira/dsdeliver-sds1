@@ -13,7 +13,9 @@ const Orders = () => {
         axios.get(`${BASE_URL}/products`)
             .then((response) => {
                 setProducts(response.data);
-                
+            })
+            .catch((error) => {
+                console.log(`Não foi possivel carregar os produtos: ${error}`);
             });            
     }, []);
 
