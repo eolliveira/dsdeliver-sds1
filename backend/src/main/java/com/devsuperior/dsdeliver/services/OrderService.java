@@ -34,10 +34,11 @@ public class OrderService {
 	
 	@Transactional
 	public OrderDTO insert(OrderDTO dto) {
-		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(), dto.getStatus().PENDING);
+		dto.getStatus();
+		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(), OrderStatus.PENDING);
 		for(ProductDTO p : dto.getProducts()) {
-			@SuppressWarnings("deprecation")
-			Product product = productRepository.getOne(p.getId());
+
+			Product product = productRepository.getById(p.getId());
 			order.getProducts().add(product);
 		}
 		order = repository.save(order);
@@ -51,5 +52,4 @@ public class OrderService {
 		order = repository.save(order);
 		return new OrderDTO(order);
 	}
-
 }
