@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer';
 import Navbar from './components/NavBar';
 import Routes from './RoutesMain';
 
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <Navbar />
       <Routes />
+      <Footer />
     </div>
   );
 }

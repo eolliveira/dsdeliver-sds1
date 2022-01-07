@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Footer from '../../components/Footer';
 import OrderLocation from '../../components/OrderLocation';
 import ProductList from '../../components/ProductList';
 import StepsHeader from '../../components/SteapsHeader';
@@ -26,10 +25,11 @@ const Orders = () => {
         <>
             <div className='orders-container'>
                 <StepsHeader />
-                <ProductList products={products} />
+                <ProductList 
+                    products={products} 
+                />
                 <OrderLocation />
             </div>
-            <Footer />
         </>
     );
 }
