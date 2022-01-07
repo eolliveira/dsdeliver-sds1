@@ -1,32 +1,42 @@
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import './styles.css';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import './styles.css'
 
-const OrderLocation = () => {
-    const position = [51.505, -0.09]
+function OrderLocation() {
+
+    const position = {
+        lat: -24.0382012,
+        lng: -52.37572   
+    }
 
     return (
         <div className="order-location-container">
             <div className="order-location-content">
                 <h3 className="order-location-title">
                     Selecione onde o pedido deve ser entregue:
-                </h3>
+               </h3>
                 <div className="filter-container">
+                teste-filter
                 </div>
-                <div id="map" className="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
-                    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                        />
-                        <Marker position={[51.505, -0.09]}>
-                            <Popup>
-                                A pretty CSS3 popup. <br /> Easily customizable.
-                            </Popup>
-                        </Marker>
-                    </MapContainer>
-                </div>
+                <MapContainer
+                    center={position}
+                    zoom={13}
+                    key={position.lat}
+                    scrollWheelZoom
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker position={position}>
+                        <Popup>
+                            Meu marcador
+                        </Popup>
+                    </Marker>
+                </MapContainer>
+
             </div>
         </div>
-    );
+    )
 }
 
 export default OrderLocation;

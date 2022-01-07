@@ -4,44 +4,50 @@
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
-  }
+}
 
-  .order-card-title {
+.order-card-title {
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.015em;
     color: var(--primary-color);
     text-align: center;
-  }
+}
 
-  .order-card-image {
+.order-card-image {
     border-radius: 10px;
     margin-top: 15px;
     margin-bottom: 15px;
     width: 100%;
-  }
+}
 
-  .order-card-price {
+.order-card-price {
     font-weight: bold;
     font-size: 24px;
     line-height: 33px;
     letter-spacing: -0.015em;
     color: var(--primary-color);
     text-align: left;
-  }
+}
 
-  .order-card-description {
+.order-card-description {
     border-top: 1px solid #E6E6E6;
     margin-top: 15px;
     padding-top: 15px;
-  }
-  
-  .order-card-description p {
+}
+
+.order-card-description h3 {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: var(--secondary-color);
+}
+
+.order-card-description p {
     font-weight: normal;
     font-size: 14px;
     line-height: 19px;
     letter-spacing: -0.015em;
-  
     color: var(--secondary-color);
-  }
+}
