@@ -1,6 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Footer from '../../components/Footer';
+import OrderLocation from '../../components/OrderLocation';
 import ProductList from '../../components/ProductList';
+import StepsHeader from '../../components/SteapsHeader';
 import { Product } from '../../types/product';
 import { BASE_URL } from '../../utils/Requests';
 import './styles.css';
@@ -21,9 +24,12 @@ const Orders = () => {
 
     return (
         <>
-            <div>
+            <div className='orders-container'>
+                <StepsHeader />
                 <ProductList products={products} />
+                <OrderLocation />
             </div>
+            <Footer />
         </>
     );
 }

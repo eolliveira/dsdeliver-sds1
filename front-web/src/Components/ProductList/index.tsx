@@ -9,10 +9,15 @@ type Props = {
 
 const ProductList = ( { products } : Props) => {
     return (
-            <div className='container products-content'>
+            <div className='orders-list-container'>
+                <div className="orders-list-items">
                 {products.map((product) => (
-                    <ProductCard key={product.id} product={product}/>
+                    <ProductCard 
+                        key={product.id} 
+                        product={product}
+                    />
                 ))}
+                </div>
             </div>
     );
 }
